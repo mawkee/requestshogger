@@ -4,13 +4,34 @@ Capture and present potentially any kind of HTTP API requests
 
 ## Quickstart
 
+### Using docker/dockerhub
+
+```
+docker run -p 8910:8910 mawkee/requestshogger
+```
+
+### Using local repository
+
 1. Download or clone this repository
 1. Run `pipenv install`
 1. Run `pipenv run python hogger/reqhogger.py`
 
-That's it. By default, RequestsHogger binds to 127.0.0.1 and port 8910. Just submit any kind of request (GET, POST, PUT, DELETE, PATCH, you name it) to `http://127.0.0.1:8910/hog/` and they'll be automatically captured. To see the captured requests, check `http://127.0.0.1:8910/`.
+### Usage
+
+By default, RequestsHogger binds to 127.0.0.1 and port 8910. Just submit any kind of request (GET, POST, PUT, DELETE, PATCH, you name it) to `http://127.0.0.1:8910/hog/` and they'll be automatically captured. To see the captured requests, check `http://127.0.0.1:8910/`.
 
 Note that this program is not meant to implement any security at all. It should NEVER be used on any kind of production environment, instead being used solely as a local development or testing tool.
+
+## Configurations
+
+There are a few environment variables that can be used to change the behavior.
+
+- HOGGER_PERSIST
+    By default, RequestsHogger will not persist your requests on disk, instead using an in-memory database. This means that in a restart, all your data will be lost. Setting this environment variable to any value will inform RequestsHogger that you want your data to persist on a `hogger.json` file.
+    Usage: `HOGGER_PERSIST=1 pipenv run python hogger/reqhogger.py`
+- HOGGER_HOST and HOGGER_PORT
+    The host and port to bind to. By default, HOST binds to `127.0.0.1` and PORT binds to `8910`. Just change them as you see fit, if necessary
+    Usage: `HOGGER_PORT=8888 pipenv run python hogger/reqhogger.py`
 
 ## Prerequisites
 
