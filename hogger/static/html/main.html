@@ -1,0 +1,71 @@
+<html lang="en" xmlns:py="http://genshi.edgewall.org/">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+    <title>Requests Hogger</title>
+    <meta name="description" content="Requests Hogger" />
+    <meta name="author" content="Danilo Martins" />
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link href="/static/css/datatables.min.css" rel="stylesheet" />
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/static/css/mdb.min.css" rel="stylesheet" />
+    <link href="/static/css/style.css" rel="stylesheet" />
+
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/datatables.min.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark deep-purple darken-1">
+            <div class="container">
+
+                <a class="navbar-brand" href="https://github.com/mawkee/requestshogger/" target="_blank">Requests Hogger</a>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/clean/">Clean request list</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+        <div class="container-fluid">
+            <table id="requests" class="datatables table table-striped table-responsive-md table-hover" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th>Date/time</th>
+                        <th>Method</th>
+                        <th>Path</th>
+                        <th>Parameters</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <footer class="page-footer font-small deep-purple darken-3 pt-4 mt-4">
+            <div class="footer-copyright text-center py-3">
+                Author: <a href="https://github.com/mawkee/">Mawkee</a><br />
+                RequestsHogger uses the MIT license
+            </div>
+        </footer>
+    </footer>
+
+    <script type="text/javascript" src="/static/js/main.js"></script>
+</body>
+
+</html>
