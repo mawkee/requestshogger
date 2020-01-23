@@ -1,8 +1,10 @@
 $(document).ready(function () {
     function delete_button(idx) {
-        return '<a href="/delete/' + idx + '">' +
-            '<button type="button" class="btn btn-red btn-sm m-0" >Delete</button>' +
-            '</a>';
+        return `
+            <a href="/delete/${idx}">
+                <button type="button" class="btn btn-red btn-sm m-0">Delete</button>
+            </a>
+            `;
     };
 
     var table = $('#requests').DataTable({
@@ -34,16 +36,19 @@ $(document).ready(function () {
         var headers = "";
         var json_data = "";
         for (var [key, value] of Object.entries(data.headers)) {
-            headers += '<tr>' +
-                '<td><strong>' + key + '</strong></td>' +
-                '<td>' + value + '</td>' +
-                '</tr>';
+            headers += `
+                <tr>
+                    <td><strong> ${key} </strong></td>
+                    <td>${value}</td>
+                </tr>`;
         };
         for (var [key, value] of Object.entries(data.json)) {
-            json_data += '<tr>' +
-                '<td><strong>' + key + '</strong></td>' +
-                '<td>' + value + '</td>' +
-                '</tr>';
+            valueAsStr = JSON.stringify(value);
+            json_data += `
+                <tr>
+                    <td><strong> ${key} </strong></td>
+                    <td><pre>${valueAsStr}</pre></td>
+                </tr>`;
         };
 
 
