@@ -1,7 +1,7 @@
 import datetime
 import os
 from functools import lru_cache
-
+import json
 import cherrypy
 import tinydb
 
@@ -36,11 +36,18 @@ class Greedo:
     @cherrypy.tools.json_out()
     @cherrypy.expose
     def default(self, *args, **kwargs):
+        # It's easier to ask forgiveness than it is to get permission
+        try:
+            json_data = json.load(cherrypy.request.body)
+        except json.decoder.JSONDecodeError:
+            json_data = {}
+
         data = {
             "datetime": str(datetime.datetime.now()),
             "method": cherrypy.request.method,
             "path": "/".join(cherrypy.request.args),
             "headers": cherrypy.request.headers,
+            "json": json_data,
             "params": " | ".join(
                 [f"{k}={v}" for k, v in cherrypy.request.params.items()]
             ),

@@ -2,7 +2,7 @@ $(document).ready(function () {
     function delete_button(idx) {
         return '<a href="/delete/' + idx + '">' +
             '<button type="button" class="btn btn-red btn-sm m-0" >Delete</button>' +
-        '</a>';
+            '</a>';
     };
 
     var table = $('#requests').DataTable({
@@ -23,7 +23,7 @@ $(document).ready(function () {
                 "className": 'dt-body-right',
                 "data": "idx",
                 "orderable": false,
-                "render": function(data, type, row, meta) {
+                "render": function (data, type, row, meta) {
                     return delete_button(data);
                 }
             },
@@ -32,12 +32,20 @@ $(document).ready(function () {
 
     function format(data) {
         var headers = "";
+        var json_data = "";
         for (var [key, value] of Object.entries(data.headers)) {
             headers += '<tr>' +
-                '<td class="title">' + key + '</td>' +
+                '<td><strong>' + key + '</strong></td>' +
                 '<td>' + value + '</td>' +
                 '</tr>';
         };
+        for (var [key, value] of Object.entries(data.json)) {
+            json_data += '<tr>' +
+                '<td><strong>' + key + '</strong></td>' +
+                '<td>' + value + '</td>' +
+                '</tr>';
+        };
+
 
         return '<div class="details-container">' +
             '<table cellpadding="5" cellspacing="0" border="0" class="details-table">' +
@@ -45,6 +53,10 @@ $(document).ready(function () {
             '<td class="title" colspan=2>Headers</td>' +
             '</tr>' +
             headers +
+            '<tr>' +
+            '<td class="title" colspan=2>JSON</td>' +
+            '</tr>' +
+            json_data +
             '</table>' +
             '</div>';
     };
