@@ -40,6 +40,7 @@ main {
 
 .title {
     font-weight: 400;
+    font-size: larger;
 }
 
 .iconSettings, td.details-control:before, tr.shown td.details-control:before {
