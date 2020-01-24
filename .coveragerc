@@ -1,0 +1,9 @@
+[run]
+branch = True
+
+include =
+    hogger/*
+
+[report]
+show_missing = True
+precision = 2

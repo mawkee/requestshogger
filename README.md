@@ -48,6 +48,20 @@ This project was tested on Python 3.6, 3.7 and 3.8
 ##### TODO - Create tests
 Currently there are no tests of any kind for this project
 
+* Running unit tests:
+
+```sh
+$ python -m unittest discover -v
+```
+
+* Running tests coverage:
+
+```sh
+$ coverage run -m unittest discover
+$ coverage report -m
+$ coverage erase
+```
+
 ## Built With
 
 * Basic Interface implemented on top of [MDBootStrap](http://mdbootstrap.com)
