@@ -45,13 +45,10 @@ This project was tested on Python 3.6, 3.7 and 3.8
 
 ## Tests
 
-##### TODO - Create tests
-Currently there are no tests of any kind for this project
-
 * Running unit tests:
 
 ```sh
-$ python -m unittest discover -v
+$ pipenv run python -m unittest discover -v
 ```
 
 * Running tests coverage:
@@ -73,11 +70,14 @@ Just make sure you use the pre-commit hooks and follow the PEP8 specification. Y
 
 ## Versioning
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mawkee/requ/tags).
+_NOTE: This project is still **beta** -- versioning will start at 1.0 when ready_
+
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/mawkee/requestshogger/tags).
 
 ## Authors
 
-* **Danilo Martins** - *Initial work* - [Mawkee](https://github.com/PurpleBooth)
+* **Danilo Martins** - *Initial work* - [Mawkee](https://github.com/mawkee)
+* **Deepak Vashist** - *Test scaffolding and initial tests* - [Deepak](https://github.com/deepakvashist)
 
 ## License
 
