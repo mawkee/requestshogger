@@ -20,6 +20,7 @@ class RequestStorageTestCase(TestCase):
         self.assertEqual(os.environ["HOGGER_PERSIST"], "1")
         request_storage = RequestStorage()
         self.assertTrue(isinstance(request_storage.storage.storage, JSONStorage))
+        request_storage.storage.close()
 
     def test_instantiate_class_without_hogger_persist(self):
         self.assertIsNone(os.environ.get("HOGGER_PERSIST"))
