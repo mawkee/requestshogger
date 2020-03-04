@@ -43,7 +43,7 @@ $(document).ready(function () {
                 </tr>`;
         };
         for (var [key, value] of Object.entries(data.json)) {
-            valueAsStr = JSON.stringify(value);
+            valueAsStr = JSON.stringify(value, null, 2);
             json_data += `
                 <tr>
                     <td><strong> ${key} </strong></td>
