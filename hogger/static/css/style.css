@@ -12,6 +12,10 @@ main {
     margin-top: 20px;
 }
 
+.container-fluid {
+    padding: 15px;
+}
+
 .container .details-row td {
     padding: 0;
     margin: 0;
@@ -48,4 +52,10 @@ main {
 td.details-control {
     cursor: pointer;
     text-align: center;
+}
+
+.view {
+    margin-top: -1.25rem;
+    border-radius: .25rem;
+    padding: .5rem;
 }

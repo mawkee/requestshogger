@@ -12,6 +12,14 @@ $(document).ready(function () {
         "order": [[1, 'desc']],
         "columns": [
             {
+                "data": "json",
+                "searchable": true,
+                "visible": false,
+                "render": function (data, type, row, meta) {
+                    return JSON.stringify(data);
+                }
+            },
+            {
                 "className": "details-control",
                 "defaultContent": '<i class="fas fa-expand-arrows-alt"></i>',
                 "data": null,
@@ -92,7 +100,16 @@ $(document).ready(function () {
         }
     });
 
-    // setInterval(function () {
-    //     table.ajax.reload(resetPaging=false);
-    // }, 3000);
+    $("#btn-clean-requests").click(
+        function () {
+            $.post("/clean", function () {
+                table.ajax.reload(resetPaging = false);
+            });
+        }
+    );
+    $("#btn-reload-requests").click(
+        function () {
+            table.ajax.reload(resetPaging = false);
+        }
+    )
 });

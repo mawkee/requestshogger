@@ -55,29 +55,62 @@
 
     <main>
         <div class="container-fluid">
-            <table id="requests" class="datatables table table-striped table-responsive-md table-hover" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>
-                            <i class="far fa-clock"></i>
-                            Date/time
-                        </th>
-                        <th>
-                            <i class="fas fa-cogs"></i>
-                            Method
-                        </th>
-                        <th>
-                            <i class="fas fa-road"></i>
-                            Path
-                        </th>
-                        <th>
-                            <i class="fas fa-dragon"></i>
-                            Actions
-                        </th>
-                    </tr>
-                </thead>
-            </table>
+            <div class="card card-cascade narrower">
+
+                <!--Card image-->
+                <div
+                    class="view view-cascade gradient-card-header blue-gradient narrower py-2 mx-4 mb-3 d-flex justify-content-between align-items-center">
+
+                    <div>
+                        <button id="btn-reload-requests" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                            <i class="far fa-sync-alt mt-0"></i>
+                        </button>
+                    </div>
+
+                    <a href="" class="white-text mx-3">Requests</a>
+
+                    <div>
+                        <button id="btn-clean-requests" type="button" class="btn btn-outline-white btn-rounded btn-sm px-2">
+                            <i class="far fa-trash-alt mt-0"></i>
+                        </button>
+                    </div>
+
+                </div>
+                <!--/Card image-->
+
+                <div class="px-4">
+                    <div class="table-wrapper">
+
+                        <table id="requests" class="datatables table table-striped table-responsive-md table-hover mb-0" cellspacing="0">
+                            <thead>
+                                <tr>
+                                    <th>
+                                        <i class="far fa-clock"></i>
+                                        JSON data
+                                    </th>
+                                    <th></th>
+                                    <th>
+                                        <i class="far fa-clock"></i>
+                                        Date/time
+                                    </th>
+                                    <th>
+                                        <i class="fas fa-cogs"></i>
+                                        Method
+                                    </th>
+                                    <th>
+                                        <i class="fas fa-road"></i>
+                                        Path
+                                    </th>
+                                    <th>
+                                        <i class="fas fa-dragon"></i>
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
 
