@@ -9,7 +9,7 @@ $(document).ready(function () {
 
     var table = $('#requests').DataTable({
         "ajax": "/data",
-        "buttons": ["clear"],
+        "order": [[1, 'desc']],
         "columns": [
             {
                 "className": "details-control",
@@ -20,7 +20,6 @@ $(document).ready(function () {
             { "data": "datetime" },
             { "data": "method" },
             { "data": "path" },
-            { "data": "params" },
             {
                 "className": 'dt-body-right',
                 "data": "idx",
@@ -42,6 +41,14 @@ $(document).ready(function () {
                     <td>${value}</td>
                 </tr>`;
         };
+        if (data.params) {
+            headers += `
+            <tr>
+                <td><strong>Params</strong></td>
+                <td>${data.params}</td>
+            </tr>`;
+        };
+
         for (var [key, value] of Object.entries(data.json)) {
             valueAsStr = JSON.stringify(value, null, 2);
             json_data += `
@@ -50,7 +57,6 @@ $(document).ready(function () {
                     <td><pre>${valueAsStr}</pre></td>
                 </tr>`;
         };
-
 
         return '<div class="details-container">' +
             '<table cellpadding="5" cellspacing="0" border="0" class="details-table">' +
@@ -85,4 +91,8 @@ $(document).ready(function () {
             $(this.children[0]).removeClass('fa-expand-arrows-alt');
         }
     });
+
+    // setInterval(function () {
+    //     table.ajax.reload(resetPaging=false);
+    // }, 3000);
 });

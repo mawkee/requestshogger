@@ -17,6 +17,17 @@
 
     <script type="text/javascript" src="/static/js/jquery.min.js"></script>
     <script type="text/javascript" src="/static/js/datatables.min.js"></script>
+
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="static/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="static/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="static/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="static/img/favicon/site.webmanifest">
+    <link rel="mask-icon" href="static/img/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <link rel="shortcut icon" href="static/img/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="msapplication-config" content="static/img/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 </head>
 
 <body>
@@ -25,15 +36,18 @@
         <nav class="navbar navbar-expand-lg navbar-dark deep-purple darken-1">
             <div class="container">
 
-                <a class="navbar-brand" href="https://github.com/mawkee/requestshogger/" target="_blank">Requests Hogger</a>
+                <a class="navbar-brand" href="https://github.com/mawkee/requestshogger/" target="_blank">
+                    <img src="static/img/logo.png" height="50" alt="Requests Hogger Logo" />
+                    Requests Hogger 1.1
+                </a>
 
-                <div class="collapse navbar-collapse">
+                <!-- <div class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="/clean/">Clean request list</a>
                         </li>
                     </ul>
-                </div>
+                </div> -->
             </div>
 
         </nav>
@@ -45,11 +59,22 @@
                 <thead>
                     <tr>
                         <th></th>
-                        <th>Date/time</th>
-                        <th>Method</th>
-                        <th>Path</th>
-                        <th>Parameters</th>
-                        <th>Actions</th>
+                        <th>
+                            <i class="far fa-clock"></i>
+                            Date/time
+                        </th>
+                        <th>
+                            <i class="fas fa-cogs"></i>
+                            Method
+                        </th>
+                        <th>
+                            <i class="fas fa-road"></i>
+                            Path
+                        </th>
+                        <th>
+                            <i class="fas fa-dragon"></i>
+                            Actions
+                        </th>
                     </tr>
                 </thead>
             </table>
@@ -57,7 +82,7 @@
     </main>
 
     <footer>
-        <footer class="page-footer font-small deep-purple darken-3 pt-4 mt-4">
+        <footer class="page-footer font-small deep-purple darken-3">
             <div class="footer-copyright text-center py-3">
                 Author: <a href="https://github.com/mawkee/">Mawkee</a><br />
                 RequestsHogger uses the MIT license
