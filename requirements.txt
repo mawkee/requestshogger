@@ -1,14 +1,14 @@
--i https://pypi.org/simple
-cheroot==8.2.1
+-i https://pypi.org/simple/
+cheroot==8.5.2
 cherrypy==18.5.0
-jaraco.classes==3.1.0
-jaraco.collections==3.0.0
-jaraco.functools==3.0.0
-jaraco.text==3.2.0
-more-itertools==8.0.2
-portend==2.6
-pytz==2019.3
-six==1.13.0
-tempora==2.1.0
+jaraco.classes==3.2.1
+jaraco.collections==3.3.0
+jaraco.functools==3.3.0
+jaraco.text==3.5.0
+more-itertools==8.7.0
+portend==2.7.1
+pytz==2021.1
+six==1.15.0
+tempora==4.0.1
 tinydb==3.15.2
 zc.lockfile==2.0
