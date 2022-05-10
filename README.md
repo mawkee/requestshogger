@@ -78,6 +78,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 * **Danilo Martins** - *Initial work* - [Mawkee](https://github.com/mawkee)
 * **Deepak Vashist** - *Test scaffolding and initial tests* - [Deepak](https://github.com/deepakvashist)
+* **Evandro Arruda** - *Dockerfile update to Debian 11 and app isolation* - [ecarruda](https://github.com/ecarruda)
 
 ## License
 
