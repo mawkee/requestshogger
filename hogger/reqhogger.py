@@ -16,7 +16,7 @@ class RequestStorage:
             self.storage = tinydb.TinyDB(storage=tinydb.storages.MemoryStorage)
 
     def clean(self):
-        self.storage.purge()
+        self.storage.purge_tables()
 
     def push(self, item):
         self.storage.insert(item)
