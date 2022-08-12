@@ -61,3 +61,6 @@ ipython_config.py
 
 # Json database file
 hogger.json
+
+# Ignore venv
+.venv
